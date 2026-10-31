@@ -1,68 +1,182 @@
+/* Google Font: Poppins is loaded in each HTML page. */
 
-        :root {
-            --primary-color: #243b64;
-            --secondary-color: #e1eaf8;
-            --background-color: #f4f7fb;
-            --card-color: #ffffff;
-            --text-color: #333333;
-            --spacing: 20px;
-            --border-radius: 8px;
-        }
+/* Task 5.4: Reusable colours and spacing */
+:root {
+    --primary-color: #243b64;
+    --secondary-color: #e1eaf8;
+    --background-color: #f4f7fb;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --spacing: 20px;
+    --border-radius: 8px;
+}
 
-        * {
-            box-sizing: border-box;
-        }
+/* Task 5.2: Universal selector */
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            background-color: var(--background-color);
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 0;
-            color: var(--text-color);
-        }
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-        h1 {
-            color: var(--primary-color);
-            font-size: 36px;
-        }
+/* Task 5.2: Element selector */
+h1 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 36px;
+}
 
-        h2 {
-            color: var(--primary-color);
-            font-size: 24px;
-        }
+h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+}
 
-        #hero {
-            background-color: var(--secondary-color);
-            padding: var(--spacing);
-        }
+/* Task 5.2: ID selector */
+#hero {
+    padding: var(--spacing);
+    background-color: var(--secondary-color);
+}
 
-        nav {
-            background-color: var(--primary-color);
-            padding: 15px;
-        }
+/* Navigation */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 15px;
-            font-weight: 500;
-        }
+nav a {
+    padding: 6px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-        .card {
-            background-color: var(--card-color);
-            padding: var(--spacing);
-            margin: var(--spacing) 0;
-            border-radius: var(--border-radius);
-        }
+nav a:hover {
+    text-decoration: underline;
+}
 
-        main {
-            padding: var(--spacing);
-        }
+/* Task 5.2: Class selector */
+.card {
+    margin: var(--spacing) 0;
+    padding: var(--spacing);
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
 
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: var(--secondary-color);
-        }
-    
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: var(--spacing);
+}
+
+footer {
+    padding: 15px;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+/* Form styling and button styling */
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+input,
+select {
+    width: 100%;
+    max-width: 450px;
+    padding: 10px;
+    border: 1px solid #b8c4d6;
+    border-radius: 5px;
+    font: inherit;
+}
+
+input[type="submit"] {
+    width: auto;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #182a49;
+}
+
+/* Table styling */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #c8d2e0;
+    text-align: left;
+}
+
+th {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Task 5.5: Mobile responsive styles */
+@media (max-width: 600px) {
+    :root {
+        --spacing: 14px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    main {
+        padding: var(--spacing);
+    }
+
+    .card {
+        padding: var(--spacing);
+    }
+
+    input,
+    select {
+        max-width: 100%;
+    }
+}

@@ -2,42 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register for Tech Club</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>Register for Tech Club</title>
 </head>
 <body>
-    <header>
+    <header id="hero">
         <h1>Register for Tech Club</h1>
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="about.html">About</a> |
-            <a href="register.html">Register</a> |
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="register.html">Register</a>
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h2>Registration Form</h2>
+        <section class="card">
+            <h2>Registration Form</h2>
 
-        <form>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-            <br><br>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br><br>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <label for="course">Course:</label>
-            <select id="course" name="course">
-                <option value="cse">Computer Science</option>
-                <option value="aiml">AI and Machine Learning</option>
-                <option value="it">Information Technology</option>
-            </select>
-            <br><br>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
 
-            <input type="submit" value="Register">
-        </form>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course:</label>
+                    <select id="course" name="course">
+                        <option value="cse">Computer Science</option>
+                        <option value="aiml">AI and Machine Learning</option>
+                        <option value="it">Information Technology</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="Register">
+            </form>
+        </section>
     </main>
 
     <footer>
